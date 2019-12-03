@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
                 vgContent.visible()
             }
 
-        }, 4000)
+        }, 2000)
     }
 
     private fun starAnim() {
