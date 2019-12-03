@@ -10,7 +10,7 @@
 
     <LinearLayout
             android:id="@+id/vgContent"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_marginTop="@dimen/_38sdp"
             android:orientation="vertical"
             android:layout_width="match_parent"

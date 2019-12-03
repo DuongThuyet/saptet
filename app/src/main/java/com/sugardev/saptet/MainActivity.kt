@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
     private fun pauseAnim() {
         handle.postDelayed({
             animLottie.pauseAnimation()
-            animLottie.showSlideInDown(800) {
+            animLottie.showSlideInDown(400) {
                 vgContent.visible()
             }
 
