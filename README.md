@@ -1,7 +1,4 @@
-Date Range Picker 
+Sắp tết bà kon ơi ^.^
 ===================
-Date Range Picker is a Calendar Picker View to show a Customized Date Range Picker with improved UI
+Ứng dụng để biết thời gian đến tết nha bà kon.
 
-## Dependencies
-
-[implementation 'com.github.DuongThuyet:daterangepicker:master-SNAPSHOT'](https://github.com/DuongThuyet/DateRangePicker.git)
