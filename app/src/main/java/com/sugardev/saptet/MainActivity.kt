@@ -17,21 +17,42 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     private val handle = Handler()
-    private val tetHolidays = "25/01/2020"
+    private var tetHolidays = ""
     private val pattern = "dd/MM/yyyy"
     private lateinit var cd: CountDownTimer
     private lateinit var mediaPlayer: MediaPlayer
+
+    object Tet {
+        const val tet20 = "25/01/2020"
+        const val tet21 = "12/02/2021"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         this.turnOnFullScreen()
+        initTet()
         initPlayer()
         starAnim()
         pauseAnim()
         initView()
         initEventClick()
 
+    }
+
+    private fun initTet() {
+        val currentTime = Calendar.getInstance().time
+        tetHolidays = when (SimpleDateFormat("yyyy").format(currentTime)) {
+            "2020" -> {
+                Tet.tet20
+            }
+            "2021" -> {
+                Tet.tet21
+            }
+            else -> {
+                Tet.tet20
+            }
+        }
     }
 
     private fun initPlayer() {
