@@ -1,14 +1,17 @@
 package com.sugardev.saptet
 
 
+import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.sugardev.saptet.extension.showSlideInDown
 import com.sugardev.saptet.extension.turnOnFullScreen
 import com.sugardev.saptet.extension.visible
+import com.sugardev.saptet.service.NotifyCountDownService
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -21,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private val pattern = "dd/MM/yyyy"
     private lateinit var cd: CountDownTimer
     private lateinit var mediaPlayer: MediaPlayer
+
 
     object Tet {
         const val tet20 = "25/01/2020"
@@ -38,6 +42,13 @@ class MainActivity : AppCompatActivity() {
         initView()
         initEventClick()
 
+
+    }
+
+    private fun startServiceTet() {
+        val serviceIntent = Intent(this, NotifyCountDownService::class.java)
+        serviceIntent.putExtra("inputExtra", "Foreground Service Example in Android")
+        ContextCompat.startForegroundService(this, serviceIntent)
     }
 
     private fun initTet() {
@@ -83,7 +94,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         cd.start()
-
+      //  startServiceTet()
     }
 
     private fun pauseAnim() {

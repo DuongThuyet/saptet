@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg"
+        android:orientation="horizontal">
+
+        <TextView
+                android:padding="@dimen/_8sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:fontFamily="@font/dancing_script"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/_28sdp"
+                android:textStyle="bold"
+                tools:text="688" />
+
+        <TextView
+                android:padding="@dimen/_8sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:id="@+id/tvHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:fontFamily="@font/dancing_script"
+                android:gravity="center"
+                android:lines="1"
+                android:textColor="#000000"
+                android:textSize="@dimen/_28sdp"
+                android:textStyle="bold"
+                tools:text="688" />
+
+        <TextView
+                android:padding="@dimen/_8sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:id="@+id/tvMinute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:fontFamily="@font/dancing_script"
+                android:gravity="center"
+                android:lines="1"
+                android:text="688"
+                android:textColor="#000000"
+                android:textSize="@dimen/_28sdp"
+                android:textStyle="bold" />
+
+        <TextView
+                android:padding="@dimen/_8sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:id="@+id/tvSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:fontFamily="@font/dancing_script"
+                android:gravity="center"
+                android:lines="1"
+                android:textColor="#000000"
+                android:textSize="@dimen/_28sdp"
+                android:textStyle="bold"
+                tools:text="00" />
+
+</LinearLayout>
