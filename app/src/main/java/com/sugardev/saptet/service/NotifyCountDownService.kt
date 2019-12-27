@@ -26,7 +26,6 @@ class NotifyCountDownService : Service() {
     private lateinit var cd: CountDownTimer
 
     override fun onCreate() {
-        Log.d("TAG_FOREGROUND_SERVICE", "My foreground service onCreate().")
         super.onCreate()
     }
 
