@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
     object Tet {
         const val tet20 = "25/01/2020"
         const val tet21 = "12/02/2021"
+        const val tet20Title = "Canh Tý 2020"
+        const val tet21Title = "Tân Sửu 2021"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,9 +57,11 @@ class MainActivity : AppCompatActivity() {
         val currentTime = Calendar.getInstance().time
         tetHolidays = when (SimpleDateFormat("yyyy").format(currentTime)) {
             "2020" -> {
+                tvTitle.text = Tet.tet20Title
                 Tet.tet20
             }
             "2021" -> {
+                tvTitle.text = Tet.tet21Title
                 Tet.tet21
             }
             else -> {

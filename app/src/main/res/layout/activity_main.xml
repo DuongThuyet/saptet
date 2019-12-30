@@ -222,12 +222,13 @@
         </LinearLayout>
 
         <TextView
+                android:id="@+id/tvTitle"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:gravity="center"
                 android:padding="@dimen/_8sdp"
                 android:textSize="@dimen/_28sdp"
                 android:textColor="#ffffff"
-                android:text="Canh Tý 2022"
+                android:text="Canh Tý 2020"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dancing_script"/>

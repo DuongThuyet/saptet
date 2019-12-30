@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     signingConfigs {
         release {
-            storeFile file('C:\\Users\\Quang.Cao\\Desktop\\keystore.jks')
+            storeFile file('C:\\Users\\Quang.Cao\\Desktop\\keystore\\saptet\\keystore.jks')
             storePassword '123456'
             keyAlias = 'android'
             keyPassword '123456'
