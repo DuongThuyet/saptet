@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     private var tetHolidays = ""
     private val pattern = "dd/MM/yyyy"
     private lateinit var cd: CountDownTimer
-    private lateinit var mediaPlayer: MediaPlayer
+
 
 
     object Tet {
@@ -42,7 +42,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         this.turnOnFullScreen()
         initTet()
-
         starAnim()
         pauseAnim()
         initView()
@@ -108,14 +107,8 @@ class MainActivity : AppCompatActivity() {
         animLottie.playAnimation()
     }
 
-    override fun onPause() {
-        mediaPlayer.pause()
-        super.onPause()
-    }
 
     override fun onDestroy() {
-        mediaPlayer.stop()
-        mediaPlayer.release()
         handle.removeCallbacksAndMessages(null)
         super.onDestroy()
     }
