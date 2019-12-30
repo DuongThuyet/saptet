@@ -29,8 +29,12 @@ class MainActivity : AppCompatActivity() {
     object Tet {
         const val tet20 = "25/01/2020"
         const val tet21 = "12/02/2021"
+        const val tet22 = "01/02/2022"
+        const val tet23 = "22/01/2023"
         const val tet20Title = "Canh Tý 2020"
         const val tet21Title = "Tân Sửu 2021"
+        const val tet22Title = "Nhâm Dần 2022"
+        const val tet23Title = "Quý Mão 2022"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,19 +42,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         this.turnOnFullScreen()
         initTet()
-        initPlayer()
+
         starAnim()
         pauseAnim()
         initView()
-        initEventClick()
-
-
-    }
-
-    private fun startServiceTet() {
-        val serviceIntent = Intent(this, NotifyCountDownService::class.java)
-        serviceIntent.putExtra("inputExtra", "Foreground Service Example in Android")
-        ContextCompat.startForegroundService(this, serviceIntent)
     }
 
     private fun initTet() {
@@ -64,20 +59,18 @@ class MainActivity : AppCompatActivity() {
                 tvTitle.text = Tet.tet21Title
                 Tet.tet21
             }
+            "2022" -> {
+                tvTitle.text = Tet.tet22Title
+                Tet.tet22
+            }
+            "2023" -> {
+                tvTitle.text = Tet.tet23Title
+                Tet.tet23
+            }
             else -> {
+                tvTitle.text = Tet.tet20Title
                 Tet.tet20
             }
-        }
-    }
-
-    private fun initPlayer() {
-        mediaPlayer = MediaPlayer.create(applicationContext, R.raw.lk_xuan)
-    }
-
-    private fun initEventClick() {
-        ivMusic.setOnClickListener {
-            if (mediaPlayer.isPlaying) mediaPlayer.pause()
-            else playSong()
         }
     }
 
@@ -98,7 +91,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         cd.start()
-      //  startServiceTet()
+
     }
 
     private fun pauseAnim() {
@@ -109,10 +102,6 @@ class MainActivity : AppCompatActivity() {
             }
 
         }, 2000)
-    }
-
-    private fun playSong() {
-        mediaPlayer.start()
     }
 
     private fun starAnim() {
