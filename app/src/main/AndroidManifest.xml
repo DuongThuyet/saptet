@@ -19,10 +19,6 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
 
-        <service
-                android:name=".service.NotifyCountDownService"
-                android:enabled="true"
-                android:exported="true"></service>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
