@@ -47,21 +47,21 @@ class MainActivity : AppCompatActivity() {
         val currentTime = Calendar.getInstance().time
         tetHolidays = when (SimpleDateFormat("yyyy").format(currentTime)) {
             "2020" -> {
-                tvTitle.text = Tet.tet20Title
-                Tet.tet20
-            }
-            "2021" -> {
                 tvTitle.text = Tet.tet21Title
                 Tet.tet21
             }
-            "2022" -> {
+            "2021" -> {
                 tvTitle.text = Tet.tet22Title
                 Tet.tet22
             }
-            "2023" -> {
+            "2022" -> {
                 tvTitle.text = Tet.tet23Title
                 Tet.tet23
             }
+//            "2023" -> {
+//                tvTitle.text = Tet.tet24Title
+//                Tet.tet23
+//            }
             else -> {
                 tvTitle.text = Tet.tet20Title
                 Tet.tet20
